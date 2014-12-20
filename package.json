@@ -1,0 +1,28 @@
+{
+  "name": "line-numbers",
+  "version": "0.1.0",
+  "author": "Simon Lydell",
+  "license": "MIT",
+  "description": "Add line numbers to a string.",
+  "keywords": [
+    "line",
+    "number",
+    "numbers",
+    "file",
+    "add",
+    "insert",
+    "gutter",
+    "column",
+    "each"
+  ],
+  "repository": "lydell/line-numbers",
+  "scripts": {
+    "test": "mocha --ui tdd"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  },
+  "dependencies": {
+    "left-pad": "0.0.3"
+  }
+}
