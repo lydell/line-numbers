@@ -20,6 +20,20 @@ var sumJS = [
   "}"
 ]
 
+var defaultOutput = [
+  "  1 | /**",
+  "  2 |  * Sums two numbers.",
+  "  3 |  *",
+  "  4 |  * @param a Number",
+  "  5 |  * @param b Number",
+  "  6 |  * @returns Number",
+  "  7 |  */",
+  "  8 | ",
+  "  9 | function sum(a, b) {",
+  " 10 |   return a + b",
+  " 11 | }"
+]
+
 suite("lineNumbers", function() {
 
   test("is a function", function() {
@@ -28,19 +42,12 @@ suite("lineNumbers", function() {
 
 
   test("defaults", function() {
-    assert.equal(lineNumbers(sumJS.join("\n")), [
-      "  1 | /**",
-      "  2 |  * Sums two numbers.",
-      "  3 |  *",
-      "  4 |  * @param a Number",
-      "  5 |  * @param b Number",
-      "  6 |  * @returns Number",
-      "  7 |  */",
-      "  8 | ",
-      "  9 | function sum(a, b) {",
-      " 10 |   return a + b",
-      " 11 | }"
-    ].join("\n"))
+    assert.equal(lineNumbers(sumJS.join("\n")), defaultOutput.join("\n"))
+  })
+
+
+  test("array of lines", function() {
+    assert.deepEqual(lineNumbers(sumJS), defaultOutput)
   })
 
 

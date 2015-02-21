@@ -32,10 +32,13 @@ var lineNumbers = require("line-numbers")
 Usage
 =====
 
-### `lineNumbers(string, [options])` ###
+### `lineNumbers(code, [options])` ###
 
-Inserts a line number at the beginning of each line in `string`. All the line
-numbers are of the same width; shorter numbers are padded on the left side.
+Inserts a line number at the beginning of each line in `code`, which is either a
+string or an array of strings—one for each line. All the line numbers are of the
+same width; shorter numbers are padded on the left side.
+
+The return value is of the same type as `code`.
 
 `options`:
 
