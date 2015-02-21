@@ -47,10 +47,18 @@ The return value is of the same type as `code`.
 - before: `String`. String to put before the line number. Defaults to `" "`.
 - after: `String`. String to put between the line number and the line itself.
   Defaults to `" | "`.
-- transform: `Function`. A function that receives the entire string that will be
-  inserted at each line and returns a transformation of it. May be used if
-  `before` and `after` aren’t enough, or if you want to colorize the line
-  numbers, or whatever.
+- transform: `Function`. It is called for each line and passed an object with
+  the following properties:
+
+  - before: `options.before`
+  - number: `Number`. The current line number.
+  - width: `Number`. The padded width of the line numbers.
+  - after: `options.after`
+  - line: `String`. The current line.
+
+  You may modify the above properties to alter the line numbering for the
+  current line. This is useful if `before` and `after` aren’t enough, if you
+  want to colorize the line numbers, or highlight the current line.
 
 
 License

@@ -55,23 +55,29 @@ suite("lineNumbers", function() {
     assert.equal(lineNumbers(sumJS.join("\n"), {
       start: 5,
       padding: "0",
-      before: "",
+      before: "  ",
       after: ": ",
-      transform: function(string) {
-        return string.replace(/13/, "--")
+      transform: function(params) {
+        if (params.number === 13) {
+          params.line = params.line + "\n" + params.before +
+                        Array(params.width + 1).join(" ") + params.after +
+                        Array(params.line.indexOf("(") + 1).join(" ") + "^"
+          params.before = params.before.replace(/^./, ">")
+        }
       }
     }), [
-      "05: /**",
-      "06:  * Sums two numbers.",
-      "07:  *",
-      "08:  * @param a Number",
-      "09:  * @param b Number",
-      "10:  * @returns Number",
-      "11:  */",
-      "12: ",
-      "--: function sum(a, b) {",
-      "14:   return a + b",
-      "15: }"
+      "  05: /**",
+      "  06:  * Sums two numbers.",
+      "  07:  *",
+      "  08:  * @param a Number",
+      "  09:  * @param b Number",
+      "  10:  * @returns Number",
+      "  11:  */",
+      "  12: ",
+      "> 13: function sum(a, b) {",
+      "    :             ^",
+      "  14:   return a + b",
+      "  15: }"
     ].join("\n"))
   })
 
