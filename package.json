@@ -23,6 +23,6 @@
     "mocha": "^2.0.1"
   },
   "dependencies": {
-    "left-pad": "0.0.3"
+    "left-pad": "^1.0.1"
   }
 }
