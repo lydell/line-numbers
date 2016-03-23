@@ -1,3 +1,8 @@
+### Version 0.2.1 (2016-03-23) ###
+
+- Updated the left-pad dependecy to ^1.0.1.
+
+
 ### Version 0.2.0 (2015-02-21) ###
 
 - Improved: You may now pass an already split string as an array.

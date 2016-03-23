@@ -1,6 +1,6 @@
 {
   "name": "line-numbers",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Simon Lydell",
   "license": "MIT",
   "description": "Add line numbers to a string.",
