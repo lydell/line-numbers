@@ -1,6 +1,10 @@
 Overview [![Build Status](https://travis-ci.org/lydell/line-numbers.svg?branch=master)](https://travis-ci.org/lydell/line-numbers)
 ========
 
+**DEPRECATED.** This is a rather silly package that I do not recommend using.
+It's easier to copy the ~20 lines of code of this package and customize that
+code, rather than downloading and learning how to use this package.
+
 Add line numbers to a string.
 
 ```js
