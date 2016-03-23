@@ -1,3 +1,8 @@
+### Version 0.2.2 (2016-03-23) ###
+
+- Deprecated the package. (See the readme.)
+
+
 ### Version 0.2.1 (2016-03-23) ###
 
 - Updated the left-pad dependecy to ^1.0.1.
